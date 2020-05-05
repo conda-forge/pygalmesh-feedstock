@@ -11,6 +11,10 @@ source:
 
 build:
   number: 0
+  entry_points:
+    - pygalmesh-volume-from-surface = pygalmesh._cli:volume_from_surface
+    - pygalmesh-remesh-surface = pygalmesh._cli:remesh_surface
+    - pygalmesh-from-inr = pygalmesh._cli:inr 
 
 requirements:
   build:
@@ -28,6 +32,7 @@ requirements:
   run:
     - python
     - meshio
+    - importlib_metadata
 
 test:
   imports:
@@ -39,6 +44,9 @@ test:
     - test
   commands:
     - pytest
+    - pygalmesh-volume-from-surface -h
+    - pygalmesh-remesh-surface -h
+    - pygalmesh-from-inr -h
 
 about:
   home: https://github.com/nschloe/pygalmesh/
