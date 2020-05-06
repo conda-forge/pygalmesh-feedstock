@@ -10,7 +10,7 @@ source:
   sha256: 67de2cca8914acf73385fa1aea28906187fbb7065d6338c2ab9dced1dcdff444
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - pygalmesh-volume-from-surface = pygalmesh._cli:volume_from_surface
     - pygalmesh-remesh-surface = pygalmesh._cli:remesh_surface
