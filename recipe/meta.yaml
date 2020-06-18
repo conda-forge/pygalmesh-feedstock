@@ -1,5 +1,5 @@
 {% set name = "pygalmesh" %}
-{% set version = "0.6.6" %}
+{% set version = "0.6.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 67de2cca8914acf73385fa1aea28906187fbb7065d6338c2ab9dced1dcdff444
+  sha256: a49667241875c8f4fc710f710696a24647ce2388874c85fe328ff60a0ccadb54
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - pygalmesh-volume-from-surface = pygalmesh._cli:volume_from_surface
     - pygalmesh-remesh-surface = pygalmesh._cli:remesh_surface
-    - pygalmesh-from-inr = pygalmesh._cli:inr 
+    - pygalmesh-from-inr = pygalmesh._cli:inr
 
 requirements:
   build:
@@ -53,7 +53,7 @@ about:
   license: GPL-3.0-or-later
   license_family: GPL
   license_file: LICENSE
-  summary: 'A Python frontend to CGAL’s 3D mesh generators.'
+  summary: A Python frontend to CGAL’s 3D mesh generators.
   description: |
     pygalmesh is a Python frontend to CGAL’s 3D mesh generation capabilities. pygalmesh makes it easy to create high-quality 3D volume meshes, periodic volume meshes, and surface meshes. 
   doc_url: https://github.com/nschloe/pygalmesh
