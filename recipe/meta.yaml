@@ -40,7 +40,6 @@ test:
   requires:
     - pytest
     - numpy
-    - exdown
   source_files:
     - test
   commands:
