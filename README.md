@@ -5,9 +5,13 @@ Home: https://github.com/nschloe/pygalmesh/
 
 Package license: GPL-3.0-or-later
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pygalmesh-feedstock/blob/master/LICENSE.txt)
 
 Summary: A Python frontend to CGAL’s 3D mesh generators.
+
+Development: https://github.com/nschloe/pygalmesh
+
+Documentation: https://github.com/nschloe/pygalmesh
 
 pygalmesh is a Python frontend to CGAL’s 3D mesh generation capabilities. pygalmesh makes it easy to create high-quality 3D volume meshes, periodic volume meshes, and surface meshes.
 
