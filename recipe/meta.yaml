@@ -1,5 +1,5 @@
 {% set name = "pygalmesh" %}
-{% set version = "0.10.1" %}
+{% set version = "0.10.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 93ad1fc6b7e26b7a9e41f1711dc77ee94025aedffce76fbb6a6313ed3215471e
+  sha256: 57b04f097c5f5f9e1bb5f6ea4374ecda1a831f52a2138b124da23dc4f015af0b
 
 build:
   number: 0
@@ -19,7 +19,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - python >=3.7
+    - python
     - pip
     - eigen
     - cgal-cpp >=5.0.0,<6
@@ -28,7 +28,7 @@ requirements:
     - gmp  # [not win]
     - mpir  # [win]
   run:
-    - python >=3.7
+    - python
     - meshio
     - importlib_metadata
 
@@ -37,11 +37,12 @@ test:
     - pygalmesh
   requires:
     - pytest
+    - pytest-codeblocks
     - numpy
   source_files:
     - tests
   commands:
-    - pytest
+    - pytest --codeblocks
     - pygalmesh volume-from-surface -h
     - pygalmesh remesh-surface -h
     - pygalmesh from-inr -h
