@@ -19,7 +19,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - python >= 3.7
+    - python >=3.7
     - pip
     - eigen
     - cgal-cpp >=5.0.0,<6
@@ -28,7 +28,7 @@ requirements:
     - gmp  # [not win]
     - mpir  # [win]
   run:
-    - python >= 3.7
+    - python >=3.7
     - meshio
     - importlib_metadata
 
