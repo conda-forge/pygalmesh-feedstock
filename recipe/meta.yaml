@@ -1,5 +1,5 @@
 {% set name = "pygalmesh" %}
-{% set version = "0.10.0" %}
+{% set version = "0.10.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 498562dd5ce03998c79339f7d8647d30f25c7dbd5c825813c5caf6f5fbfc805d
+  sha256: 93ad1fc6b7e26b7a9e41f1711dc77ee94025aedffce76fbb6a6313ed3215471e
 
 build:
   number: 0
@@ -39,7 +39,7 @@ test:
     - pytest
     - numpy
   source_files:
-    - test
+    - tests
   commands:
     - pytest
     - pygalmesh volume-from-surface -h
