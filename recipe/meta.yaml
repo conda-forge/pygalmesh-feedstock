@@ -1,5 +1,5 @@
 {% set name = "pygalmesh" %}
-{% set version = "0.9.7" %}
+{% set version = "0.10.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5437f5cf54aa5ee3d853dc1aa435d83cd7534c5dd6182d04a26524916ae0857b
+  sha256: 57b04f097c5f5f9e1bb5f6ea4374ecda1a831f52a2138b124da23dc4f015af0b
 
 build:
   number: 0
