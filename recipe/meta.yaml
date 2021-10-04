@@ -1,5 +1,5 @@
 {% set name = "pygalmesh" %}
-{% set version = "0.9.7" %}
+{% set version = "0.10.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5437f5cf54aa5ee3d853dc1aa435d83cd7534c5dd6182d04a26524916ae0857b
+  sha256: 18d4a198087c6997fee9134f6ee4d8cdc69e7233a5b428359032a6614c6677f6
 
 build:
   number: 0
   entry_points:
-    - pygalmesh-volume-from-surface = pygalmesh._cli:volume_from_surface
-    - pygalmesh-remesh-surface = pygalmesh._cli:remesh_surface
-    - pygalmesh-from-inr = pygalmesh._cli:inr
+    - pygalmesh = pygalmesh._cli:cli
 
 requirements:
   build:
@@ -39,14 +37,15 @@ test:
     - pygalmesh
   requires:
     - pytest
+    - pytest-codeblocks
     - numpy
   source_files:
-    - test
+    - tests
   commands:
-    - pytest
-    - pygalmesh-volume-from-surface -h
-    - pygalmesh-remesh-surface -h
-    - pygalmesh-from-inr -h
+    - pytest --codeblocks
+    - pygalmesh volume-from-surface -h
+    - pygalmesh remesh-surface -h
+    - pygalmesh from-inr -h
 
 about:
   home: https://github.com/nschloe/pygalmesh/
