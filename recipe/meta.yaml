@@ -10,7 +10,7 @@ source:
   sha256: 053c997c049e59f0c00b745fa1e4ef98b1b60fdde3d71ccb233c0253050b9342
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - pygalmesh = pygalmesh._cli:cli
 
