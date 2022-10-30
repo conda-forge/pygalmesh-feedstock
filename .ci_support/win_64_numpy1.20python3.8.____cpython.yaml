@@ -11,8 +11,6 @@ mpfr:
 numpy:
 - '1.20'
 pin_run_as_build:
-  mpfr:
-    max_pin: x
   python:
     min_pin: x.x
     max_pin: x.x
