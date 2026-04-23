@@ -10,13 +10,14 @@ source:
   sha256: 2db842cfd43aed9beb2c3a2dae6276206d16587131b6f068f6c5ba049b6af2f9
 
 build:
-  number: 1
+  number: 2
   entry_points:
     - pygalmesh = pygalmesh._cli:cli
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - python
